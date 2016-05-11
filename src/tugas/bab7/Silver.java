@@ -1,45 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Polymorfisme;
-
 import java.util.Scanner;
-
-/**
- *
- * @author Prasetyo
- */
 public class Silver extends Pelanggan{
-public int hasil;
-public int diskon = 10;
-public int Diskonbarang = 10;
-public int barang;
-public String pilih;
+private int hasil;
+private int diskon = 10;
+private int Diskonbarang = 10;
+private int barang;
+private String pilih;
+private String nama;
+private String Alamat;
+private int no;
 Scanner in = new Scanner(System.in);
-public Silver(){
-
-}
+public Silver(String nama,String Alamat,int no){
+        super(nama,Alamat,no);
+        }
+@Override
+    public String Getnama(){
+    return nama;
+    }
+@Override
+    public String GetAlamat(){
+    return Alamat; 
+    }
+@Override
+    public int no(){
+    return no;
+    }
     public void pelangan(int diskon){
         this.diskon=diskon;
     }
     public void DaftarProduk() {
         do{
-        System.out.println("Daftar Produk");
-        System.out.println("Nama Produk     Harga");
-        System.out.println("1.Sampo       Rp.5.000");
-        System.out.println("2.Cream       Rp.10.000");
-        System.out.println("3.Pelembab    Rp.15.000");
-        System.out.println("4.Sabun       Rp.10.000");
-        System.out.println("5.Masker      Rp.20.000");
-        System.out.println("6.Lipstik     Rp.25.000");
-        System.out.println("0.Kembali");
         System.out.println("Masukkan urutan barang yang dibeli : ");
         urutan = in.nextInt();
         switch (urutan) {
             case 1:
-                System.out.println("Yang anda dipiih, 1.Sampo       Rp.5.000");
+                System.out.println("Yang anda dipiih, 1.Cuci Rambut    Rp.5.000");
                 System.out.println("Anda punya member (ya/tdk): ");
                 pilih = in.nextLine();
                 if(pilih == "ya"){
@@ -50,7 +45,7 @@ public Silver(){
                     System.out.println("Hasil : "+tol);
                 break;
             case 2:
-                System.out.println("Yang anda dipiih, 2.Cream       Rp.10.000");
+                System.out.println("Yang anda dipiih, 2.Potong Rambut  Rp.10.000");
                 System.out.println("Anda punya member (ya/tdk): ");
                 pilih = in.nextLine();
                 if(pilih == "ya"){
@@ -61,7 +56,7 @@ public Silver(){
                     System.out.println("Hasil : "+tol);
                 break;
             case 3:
-                System.out.println("Yang anda dipiih, 3.Pelembab    Rp.15.000");
+                System.out.println("Yang anda dipiih, 3.Lulur          Rp.15.000");
                 System.out.println("Anda punya member (ya/tdk): ");
                 pilih = in.nextLine();
                 if(pilih == "ya"){
@@ -72,7 +67,7 @@ public Silver(){
                     System.out.println("Hasil : "+tol);
                 break;
             case 4:
-                System.out.println("Yang anda dipiih, 4.Sabun       Rp.10.000");
+                System.out.println("Yang anda dipiih, 4.Warna Rambut   Rp.10.000");
                 System.out.println("Anda punya member (ya/tdk): ");
                 pilih = in.nextLine();
                 if(pilih == "ya"){
@@ -93,7 +88,7 @@ public Silver(){
                     System.out.println("Hasil : "+tol);
                 break;
             case 6:
-                System.out.println("Yang anda dipiih, 6.Lipstik     Rp.25.000");
+                System.out.println("Yang anda dipiih, 6.Perawatan      Rp.25.000");
                 System.out.println("Anda punya member (ya/tdk): ");
                 pilih = in.nextLine();
                 if(pilih == "ya"){
@@ -109,6 +104,16 @@ public Silver(){
      public void Hargabarang(int barang){
         hasil = Diskonbarang/barang;
         System.out.println("Hasil : "+hasil);
+    }
+    public void cek(){
+        System.out.println("Nama   : "+nama);
+        System.out.println("Alamat : "+Alamat);
+        System.out.println("No Urut: "+no);
+        System.out.println("Barang yang dibeli "+tol);
+    }
+@Override
+     public int Pelanggan(){
+     return no; 
     }
 }
 
