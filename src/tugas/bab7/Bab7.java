@@ -4,15 +4,16 @@ public class Bab7 {
     public static void main(String[] args) {
     int urt;
     Scanner si = new Scanner(System.in);
-    Member member = new Member("nana","malang",1,1);
+    Member member = new Member("nana","malang",1);
     Pelanggan[] pelanggan = new Pelanggan[2];
     pelanggan[1]= member;
     do{
-        System.out.println("Salon");
+        System.out.println("======= Salon =======");
         System.out.println("1.lihat daftar harga");
         System.out.println("2.Pesan produk");
         System.out.println("3.Cek Pesanan");
         System.out.println("0.Keluar");
+        System.out.println("=====================");
         System.out.println("Masukkan urutan : ");
         urt=si.nextInt();
         switch(urt){
