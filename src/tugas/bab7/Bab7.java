@@ -4,14 +4,9 @@ public class Bab7 {
     public static void main(String[] args) {
     int urt;
     Scanner si = new Scanner(System.in);
-    Silver silver = new Silver("nana","malang",1);
-    Gold gold = new Gold("riri","lawang",2);
-    Premium premium = new Premium("sendy","singosari",3);
-    Pelanggan[] pelanggan = new Pelanggan[4];
-    silver.pelangan(10);
-    pelanggan[1]= silver;
-    pelanggan[2]= premium;
-    pelanggan[3]= gold;
+    Member member = new Member("nana","malang",1,1);
+    Pelanggan[] pelanggan = new Pelanggan[2];
+    pelanggan[1]= member;
     do{
         System.out.println("Salon");
         System.out.println("1.lihat daftar harga");
@@ -22,13 +17,11 @@ public class Bab7 {
         urt=si.nextInt();
         switch(urt){
         case 1 :
-            silver.daftar();break;
+            member.daftar();break;
         case 2 :
-            silver.DaftarProduk();break;
+            member.DaftarProduk();break;
         case 3 :
-            silver.cek();
-            premium.cek();
-            gold.cek();
+            member.cek();break;
     }
     }while(urt !=0);
         System.out.println("Terima Kasih Sudah berkunjung Ke tempat kami");
