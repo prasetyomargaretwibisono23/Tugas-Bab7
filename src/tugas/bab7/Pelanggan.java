@@ -4,14 +4,12 @@ public abstract class Pelanggan {
     public String nama;
     public String Alamat;
     public int no;
-    public int member;
     public String pilih;
     Scanner in = new Scanner(System.in);
-    public Pelanggan(String nama,String Alamat,int no,int member){
+    public Pelanggan(String nama,String Alamat,int no){
         this.Alamat = Alamat;
         this.nama = nama;
         this.no = no;
-        this.member=member;
     }
     public String Getnama(){
     return nama;
@@ -23,7 +21,7 @@ public abstract class Pelanggan {
     return no;
     }
     public void daftar(){    
-    System.out.println("Daftar Produk");
+    System.out.println("===== Daftar Produk =====");
     System.out.println("Nama Produk       Harga");
     System.out.println("1.Cuci Rambut    Rp.5.000");
     System.out.println("2.Potong Rambut  Rp.10.000");
@@ -32,6 +30,7 @@ public abstract class Pelanggan {
     System.out.println("5.Masker         Rp.20.000");
     System.out.println("6.Perawatan      Rp.25.000");
     System.out.println("0.Kembali");
+    System.out.println("==========================");
     }
     public abstract int Pelanggan();
 }
