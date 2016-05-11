@@ -1,19 +1,17 @@
 package Polymorfisme;
 import java.util.Scanner;
 public abstract class Pelanggan {
-    public int urutan;
-    public int hasil;
-    public int tol;
-    public int diskon;
     public String nama;
     public String Alamat;
     public int no;
+    public int member;
     public String pilih;
     Scanner in = new Scanner(System.in);
-    public Pelanggan(String nama,String Alamat,int no){
+    public Pelanggan(String nama,String Alamat,int no,int member){
         this.Alamat = Alamat;
         this.nama = nama;
         this.no = no;
+        this.member=member;
     }
     public String Getnama(){
     return nama;
